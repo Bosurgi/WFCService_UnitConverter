@@ -38,6 +38,7 @@
             this.ImperialValuesLabel = new System.Windows.Forms.Label();
             this.MetricValuesLabel = new System.Windows.Forms.Label();
             this.measureSelector = new System.Windows.Forms.ComboBox();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ConvertButton
@@ -48,6 +49,7 @@
             this.ConvertButton.TabIndex = 0;
             this.ConvertButton.Text = "Convert";
             this.ConvertButton.UseVisualStyleBackColor = true;
+            this.ConvertButton.Click += new System.EventHandler(this.ConvertButton_Click);
             // 
             // inputTextBox
             // 
@@ -111,6 +113,7 @@
             // 
             // measureSelector
             // 
+            this.measureSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.measureSelector.FormattingEnabled = true;
             this.measureSelector.Items.AddRange(new object[] {
             "in.",
@@ -122,11 +125,20 @@
             this.measureSelector.Size = new System.Drawing.Size(34, 21);
             this.measureSelector.TabIndex = 13;
             // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Location = new System.Drawing.Point(33, 207);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(0, 13);
+            this.errorLabel.TabIndex = 14;
+            // 
             // ClientConverter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 264);
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.measureSelector);
             this.Controls.Add(this.MetricValuesLabel);
             this.Controls.Add(this.ImperialValuesLabel);
@@ -155,6 +167,7 @@
         private System.Windows.Forms.Label ImperialValuesLabel;
         private System.Windows.Forms.Label MetricValuesLabel;
         private System.Windows.Forms.ComboBox measureSelector;
+        private System.Windows.Forms.Label errorLabel;
     }
 }
 

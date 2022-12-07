@@ -3,9 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFCService_UnitConverter", "WFCService_UnitConverter\WFCService_UnitConverter.csproj", "{DB1C673D-D6C6-4053-A658-264A1E2CEE22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceConverter", "WFCService_UnitConverter\ServiceConverter.csproj", "{DB1C673D-D6C6-4053-A658-264A1E2CEE22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientConverter", "ClientConverter\ClientConverter.csproj", "{44FE1AC5-C3E9-4C48-9E76-E0C31323AE96}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DB1C673D-D6C6-4053-A658-264A1E2CEE22} = {DB1C673D-D6C6-4053-A658-264A1E2CEE22}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

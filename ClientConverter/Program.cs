@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using ClientConverter.ServiceReference;
+
 namespace ClientConverter
 {
     internal static class Program

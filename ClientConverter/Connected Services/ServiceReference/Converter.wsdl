@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Converter" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:62276/Converter.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:62276/Converter.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConverter_ConvertMilesToKm_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertMilesToKm" />
+  </wsdl:message>
+  <wsdl:message name="IConverter_ConvertMilesToKm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertMilesToKmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConverter_ConvertFeetToMeters_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertFeetToMeters" />
+  </wsdl:message>
+  <wsdl:message name="IConverter_ConvertFeetToMeters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertFeetToMetersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConverter_ConvertInchesToCentimeters_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertInchesToCentimeters" />
+  </wsdl:message>
+  <wsdl:message name="IConverter_ConvertInchesToCentimeters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertInchesToCentimetersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConverter_ConvertPoundsToKilograms_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertPoundsToKilograms" />
+  </wsdl:message>
+  <wsdl:message name="IConverter_ConvertPoundsToKilograms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertPoundsToKilogramsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IConverter">
+    <wsdl:operation name="ConvertMilesToKm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConverter/ConvertMilesToKm" message="tns:IConverter_ConvertMilesToKm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConverter/ConvertMilesToKmResponse" message="tns:IConverter_ConvertMilesToKm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertFeetToMeters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConverter/ConvertFeetToMeters" message="tns:IConverter_ConvertFeetToMeters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConverter/ConvertFeetToMetersResponse" message="tns:IConverter_ConvertFeetToMeters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertInchesToCentimeters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConverter/ConvertInchesToCentimeters" message="tns:IConverter_ConvertInchesToCentimeters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConverter/ConvertInchesToCentimetersResponse" message="tns:IConverter_ConvertInchesToCentimeters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertPoundsToKilograms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConverter/ConvertPoundsToKilograms" message="tns:IConverter_ConvertPoundsToKilograms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConverter/ConvertPoundsToKilogramsResponse" message="tns:IConverter_ConvertPoundsToKilograms_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConverter" type="tns:IConverter">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConvertMilesToKm">
+      <soap:operation soapAction="http://tempuri.org/IConverter/ConvertMilesToKm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertFeetToMeters">
+      <soap:operation soapAction="http://tempuri.org/IConverter/ConvertFeetToMeters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertInchesToCentimeters">
+      <soap:operation soapAction="http://tempuri.org/IConverter/ConvertInchesToCentimeters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertPoundsToKilograms">
+      <soap:operation soapAction="http://tempuri.org/IConverter/ConvertPoundsToKilograms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Converter">
+    <wsdl:port name="BasicHttpBinding_IConverter" binding="tns:BasicHttpBinding_IConverter">
+      <soap:address location="http://localhost:62276/Converter.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
