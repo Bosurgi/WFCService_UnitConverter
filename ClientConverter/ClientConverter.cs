@@ -74,6 +74,9 @@ namespace ClientConverter
             {
                 // Converting the input
                 valueToConvert = ParseInput(input);
+                
+                // Resetting the error label from previous errors.
+                errorLabel.Text = "";
                 try
                 {
                     // Calling the API
