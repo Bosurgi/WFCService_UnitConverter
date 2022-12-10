@@ -111,6 +111,11 @@ namespace ClientConverter
                 {
                     errorLabel.Text = "Client offline. Try again.";
                 }
+                // If the service refuses HTTP connections, usually when service is stopped.                
+                catch(System.ServiceModel.Security.MessageSecurityException)
+                {
+                    errorLabel.Text = "Client offline. Try again. (HTTP no response)";
+                }
             }
         } // End method
 
